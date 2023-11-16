@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Dosis&family=Edu+SA+Beginner:wght@500&family=Josefin+Sans:wght@300&family=Kaushan+Script&family=Poppins:wght@300&family=Quicksand:wght@600&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+*{
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
