@@ -29,6 +29,7 @@ export default function home() {
         <div className="descriptionH">
           Lorem ipsum dolor sit amet, elit. s asperirccusantium soluta aspernatur, ad excepturi consequuntur veritatis cumque, laudantium optio fuga.
         </div>
+       <button className="btnEntrar">Contratar!</button>
         </div>
       </div>
     </div>

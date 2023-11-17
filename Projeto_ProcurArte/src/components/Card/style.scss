@@ -1,0 +1,51 @@
+.cardC {
+  gap: 14px;
+  width: 400px;
+  height: 16vh;
+  padding: 10px;
+  color: #000000;
+  display: flex;
+  flex-direction: row;
+  background: #e8e7e7;
+  border-radius: 6px;
+  position: relative;
+}
+
+.fotoUser {
+  img {
+    width: 80px;
+    border-radius: 6px;
+  }
+}
+
+.wrapC {
+  display: flex;
+  flex-direction: column;
+  
+
+  .name {
+    font-size: 20px;
+    margin-bottom: 1px;
+  }
+  .estilo {
+    font-size: 16px;
+  }
+}
+
+.barraMusic{
+  margin-top: 10px;
+  width: 250px;
+}
+
+.btnCard {
+  width: 120px;
+  height: 28px;
+  padding: 6px;
+  font-size: 14px;
+  background: #b1591a;
+  border-radius: 10px;
+  position: absolute;
+  right: 16px;
+  bottom: 6px;
+ 
+}

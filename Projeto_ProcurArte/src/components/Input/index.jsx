@@ -1,5 +1,5 @@
 
-import PropTypes from 'prop-types'; // Importe o módulo PropTypes
+import PropTypes from 'prop-types'; 
 
 import './style.scss';
 
