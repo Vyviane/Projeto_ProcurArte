@@ -1,0 +1,59 @@
+.containerR {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../public/Imagens/circle-scatter-haikei.svg);
+    background-size: contain;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentR {
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    width: 76%;
+    height: 70vh;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.wrapR {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+    height: 100%;
+}
+
+.inputsR {
+    padding: 30px;
+}
+
+.col1R {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    .smallInputSide {
+        display: flex;
+        flex-direction: row;
+        gap: 1vw;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.image1R {
+    position: absolute;
+    left: 0;
+    bottom: -105px;
+}
