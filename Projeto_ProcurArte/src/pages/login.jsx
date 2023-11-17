@@ -1,5 +1,6 @@
 import "../styles/login.scss";
 import Input from "../components/Input";
+import { Link } from "react-router-dom"
 export default function login() {
   return (
     <div className="containerL">
@@ -10,10 +11,16 @@ export default function login() {
               <img src="../Imagens/logo.svg" alt="" />
             </div>
             <div className="inputsL">
-              <Input text="Email" type="text" size="medium" />
-              <Input text="Senha" type="password" size="medium" />
+              <Input text="Email" type="text" size="large" />
+              <Input text="Senha" type="password" size="large" />
             </div>
-            <button>Entrar</button>
+            <div className="buttonsLR">
+              <button className="entrar">Entrar</button>
+              <button className="loginGoogle">
+                <img src="../Imagens/google.svg" alt="" className="googleSVG" />
+              </button>
+            </div>
+            <p>Não tem conta? Faça <Link to="/register">cadastro aqui</Link></p>
           </div>
         </div>
         <img

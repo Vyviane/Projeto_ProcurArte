@@ -1,47 +1,47 @@
-.inputs{
-    display: flex;
-    flex-direction: column;
-    gap:10px
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-label{
-    color: #fff;
-    font-size: 20px;
+label {
+  color: #fff;
+  font-size: 20px;
 }
 
-input{
-    border:0;
-    background: #fffffff4;
-    border-radius: 4px;
-    outline: 0;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #000000;
-    margin-bottom: 14px;
-}
-
-button{
+input {
+  border: 0;
+  background: #fffffff4;
+  border-radius: 4px;
+  outline: 0;
   padding: 10px;
-  width: 20vw;
-  height: 6.3vh;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 14px;
+}
+
+.entrar {
+  padding: 10px;
+  width: 22vw;
+  height: 6vh;
   color: #fff;
   font-size: 18px;
   background: #000000eb;
   border-radius: 4px;
-  border:0;
-  cursor: pointer;  
+  border: 0;
+  cursor: pointer;
 }
-  .small{
-    width: 13.5vw;
-    height: 6vh;
-  }
-  .medium {
-    width: 26vw;
-    height: 7vh;
-  }
-  
-  .large {
-    width: 28vw;
-    height: 7vh;
-  }
+.small {
+  width: 13.5vw;
+  height: 6vh;
+}
+.medium {
+  width: 26vw;
+  height: 6vh;
+}
+
+.large {
+  width: 28vw;
+  height: 6vh;
+}
