@@ -1,0 +1,82 @@
+.portifolio {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../public/Imagens/circle-scatter-haikei.svg);
+    background-size: contain;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+
+    .inputs-portifolio {
+        background: linear-gradient(140deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+        backdrop-filter: blur(5px);
+        border-radius: 8px;
+        width: 50vw;
+        height: 70vh;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 8vh 3vw;
+        gap: 1.5vh;
+
+        .inputs-1 {
+            display: flex;
+            flex-direction: row;
+            white-space: nowrap;
+            gap: 0.5vh 2vw;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .inputs-2 {
+            display: flex;
+            flex-direction: row;
+            white-space: nowrap;
+            gap: 0.5vh 2vw;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .select {
+                display: flex;
+                flex-direction: column;
+                select {
+                    width: 15vw;
+                    height: 5vh;
+                    border-radius: 1rem;
+                    background-color: transparent;
+                    border: none;
+                    box-shadow: 0px 0px 10px 0px rgba(3, 3, 3, 0.817);
+                    outline: none;
+                    color: white;
+                    font-size: 20px;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    padding: 0 1vw;
+
+                    option {
+                        color: black;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    .exibir-portifolio {
+        background: linear-gradient(140deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+        backdrop-filter: blur(5px);
+        border-radius: 8px;
+        width: 20vw;
+        height: 70vh;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    }
+}
