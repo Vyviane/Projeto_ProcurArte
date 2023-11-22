@@ -1,5 +1,6 @@
 import "../styles/portifolio.scss"
 import Textarea from "../components/Textarea/Textarea"
+import P from "../components/P"
 
 export default function Portifolio() {
     return (
@@ -52,26 +53,57 @@ export default function Portifolio() {
                 </div>
                 <div className="inputs-1">
                     <Textarea
-                        name="generos"
-                        text="Quais generos você toca?"
-                    />
-                    <Textarea
-                        name="eventos"
-                        text="Quais eventos você costuma se apresentar?"
+                        text="Instagram"
+                        name="instagram"
                     />
                     <Textarea
                         name="resumo"
                         text="Resumo profissional"
                     />
                     <Textarea
-                        text="Instagram"
-                        name="instagram"
+                        name="eventos"
+                        text="Quais eventos você costuma se apresentar?"
                     />
+                </div>
+                <div className="buttonSalvar">
+                    <button className="salvar">
+                        Salvar
+                    </button>
                 </div>
 
             </div>
             <div className="exibir-portifolio">
-
+                <div className="first-s">
+                    <img src="../../Imagens/imageSergio.svg" className="img-perfil"/>
+                    <h2>Sergio mauro</h2>
+                </div>
+                <div className="second-s">
+                    <P
+                        name="estilo"
+                        text="Música classica"
+                        label="Estilo: "
+                    />
+                    <P
+                        name="instrumento"
+                        text="Violino"
+                        label="Instrumento: "
+                    />
+                    <P
+                        name="instagram"
+                        text="@sergio_do_mal"
+                        label="Instagram: "
+                    />
+                    <P
+                        name="eventos"
+                        text="Já trabalhei em festas, em orquestras, na rua..."
+                        label="Quais eventos você costuma se apresentar?: "
+                    />
+                    <P
+                        name="resumo"
+                        text="Toco instrumento profissionalmente desde os 12 anos..."
+                        label="Resumo profissional: "
+                    />
+                </div>
             </div>
         </div>
     )

@@ -13,17 +13,19 @@
         background: linear-gradient(140deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
         backdrop-filter: blur(5px);
         border-radius: 8px;
-        width: 50vw;
+        width: 40vw;
         height: 70vh;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 
         display: flex;
-        justify-content: flex-start;
+        justify-content: start;
+        
         flex-direction: column;
         padding: 8vh 3vw;
-        gap: 1.5vh;
+        gap: 2vh;
+
 
         .inputs-1 {
             display: flex;
@@ -68,6 +70,18 @@
                 }
             }
         }
+        .buttonSalvar {
+            .salvar {
+                background-color: #141555d5;
+                backdrop-filter: blur(5px);
+                border: none;
+                height: 4vh;
+                width: 7vw;
+                cursor: pointer;
+                border-radius: 0.8rem;
+                color: white;
+            }
+        }
     }
     .exibir-portifolio {
         background: linear-gradient(140deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
@@ -78,5 +92,45 @@
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
+        padding-bottom: 2vh;
+        overflow-y: auto;
+
+        
+        .first-s {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2vh;
+            color: white;
+            .img-perfil {
+                height: 13vh;
+                width: 13vw;
+            }
+        }
+        .second-s {
+            display: flex;
+            flex-direction: column;
+            gap: 2vw;
+        }
+    }
+    .exibir-portifolio::-webkit-scrollbar {
+        width: 1vh;
+        background: none;
+    }
+    .exibir-portifolio::-webkit-scrollbar-track {
+        background-color: transparent; 
+    }
+    .exibir-portifolio::-webkit-scrollbar-thumb {
+        background-color: #4f4f4f5d; 
+        border-radius: 1rem; 
+        width: 0.4vw;
+    }
+    .exibir-portifolio::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+    .exibir-portifolio::-webkit-scrollbar-thumb:active {
+        background-color: #333;
     }
 }
