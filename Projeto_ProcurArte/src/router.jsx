@@ -4,10 +4,11 @@ import Login from "./pages/login";
 import Registro from "./pages/register";
 import Conta from "./pages/account";
 import Dashboard from "./pages/dashboard";
+import Portifolio from "./pages/portifolio";
 
 const router = createBrowserRouter([
   {
-    path: "/home",
+    path: "/",
     element: <Home />,
   },
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard></Dashboard>,
+  },
+  {
+    path: "/portifolio",
+    element:  <Portifolio></Portifolio>,
   },
 ]);
 
