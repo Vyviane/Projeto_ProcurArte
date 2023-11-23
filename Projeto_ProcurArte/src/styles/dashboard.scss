@@ -1,5 +1,5 @@
 .containerD {
-  background: #000000;
+  background-image: linear-gradient(to left top, #141555, #0f1151, #090d4e, #04084a, #010247);
 }
 .contentD {
   display: flex;
@@ -9,7 +9,7 @@
 }
 
 .headerD {
-  background-image: url(../../public/Imagens/imageDashboard.svg);
+  background-image: url(../../Imagens/imageDashboard.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }

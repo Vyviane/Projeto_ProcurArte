@@ -4,7 +4,8 @@ import "./style.scss";
 const Card = ({ name, estilo }) => {
   return (
     <div className="cardC">
-      <div className="fotoUser">
+      <div className="contentC">
+        <div className="fotoUser">
         <img
           src="../../Imagens/imageSergio.svg"
           alt="Sua foto de usuario escolhida"
@@ -17,6 +18,7 @@ const Card = ({ name, estilo }) => {
         </div>
         <img className="barraMusic" src="../../Imagens/Component1.svg" alt="" />
         <button className="btnCard">Contratar</button>
+      </div>
       </div>
     </div>
   );
