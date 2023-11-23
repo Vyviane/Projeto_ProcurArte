@@ -1,6 +1,7 @@
 import "../styles/login.scss";
 import Input from "../components/Input";
 import { Link } from "react-router-dom"
+
 export default function login() {
   return (
     <div className="containerL">
