@@ -31,11 +31,6 @@ export default function register() {
             <p>Já tem uma conta? Faça <Link to="/login">login aqui</Link></p>
           </div>
         </div>
-        <img
-          className="image1R"
-          src="..\Imagens\capaRegister.png"
-          alt="Imagens ilustrativa de musicos com seus respectivos instrumento,piano, bateria, cello, trompete e um vocalista"
-        />
       </div>
     </div>
   )
