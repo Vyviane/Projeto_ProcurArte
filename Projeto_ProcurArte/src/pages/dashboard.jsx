@@ -1,13 +1,13 @@
 import "../styles/dashboard.scss";
 import Card from "../components/Card";
 
-export default function dashboard() {
+const dashboard = () => {
   return (
     <div className="containerD">
       <div className="contentD">
       <div className="headerD">
         <img
-          src="../../Imagens/imageDashboard.svg"
+          src="../Imagens/imageDashboard.svg"
           alt="Imagem que representa músicos com seus inrtumentos na mão, com a frase: vamos achar um músico pra seu evento?"
         />
       </div>
@@ -39,5 +39,7 @@ export default function dashboard() {
       </div>
       </div>
     </div>
-  );
+  )
 }
+
+export default dashboard
