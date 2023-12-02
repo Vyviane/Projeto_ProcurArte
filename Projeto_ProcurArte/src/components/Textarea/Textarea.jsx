@@ -1,16 +1,16 @@
-import PropTypes from 'prop-types'; 
+import PropTypes from "prop-types";
 
-import './style.scss';
+import "./style.scss";
 
 export default function Textarea({ name, text }) {
-    return (
-        <div className="textarea">
-            <label htmlFor={name}> {text} </label>
-            <textarea name={name} id="textarea" required></textarea>
-        </div>
-    )
+  return (
+    <div className="textarea">
+      <label htmlFor={name}> {text} </label>
+      <textarea name={name} id="textarea" required></textarea>
+    </div>
+  );
 }
 Textarea.propTypes = {
-    name: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };

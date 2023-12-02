@@ -1,0 +1,12 @@
+.inputport {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  margin-top: 1vh;
+  #inputport {
+    width: 15vw;
+    background-color: transparent;
+    color: white;
+    box-shadow: 0px 0px 10px 0px rgba(3, 3, 3, 0.817);
+  }
+}

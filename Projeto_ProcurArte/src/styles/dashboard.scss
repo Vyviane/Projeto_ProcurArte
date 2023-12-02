@@ -1,6 +1,9 @@
 .containerD {
-  background-image: linear-gradient(to left top, #141555, #0f1151, #090d4e, #04084a, #010247);
+  background-image: url(../../Imagens/bgTest10.jpg);
+  background-size: contain;
+  background-repeat: repeat;
 }
+
 .contentD {
   display: flex;
   flex-direction: column;
@@ -8,10 +11,16 @@
   align-items: center;
 }
 
+.sectionD{
+  width: 70%;
+}
+
 .headerD {
-  background-image: url(../../Imagens/imageDashboard.svg);
+  background-image: url(../../Imagens/bgTest9.jpg);
+  width: 100%;
+  height: 34vh;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .cardsD {
@@ -20,26 +29,11 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.search {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.InputSearch {
-  width: 95%;
-  height: 7vh;
-  margin: 50px 0;
-  padding: 20px;
-  background: #e8e7e7;
-}
-
-.filtro {
-  width: 5%;
-  cursor: pointer;
-  img {
-    width: 3vw;
-  }
+.infoD{
+  display: grid;
+  grid-template-columns: max-content;
+  height: 50vh;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
 }

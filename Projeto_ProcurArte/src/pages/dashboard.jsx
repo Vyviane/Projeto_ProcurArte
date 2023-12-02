@@ -1,45 +1,63 @@
+import { useState, useEffect } from "react";
 import "../styles/dashboard.scss";
 import Card from "../components/Card";
+import Search from "../components/Search";
+import { MusicianEndpoint } from "../services/musicianService";
+const api = new MusicianEndpoint();
 
-const dashboard = () => {
+const Dashboard = () => {
+  const [musician, setMusician] = useState([]);
+  const [filteredCards, setFilteredCards] = useState([]);
+
+  async function fetchMusicians() {
+    try {
+      const musiciansData = await api.listMusician();
+      setMusician([...musiciansData.musicians]);
+    } catch (error) {
+      console.error("Error fetching musicians:", error.message);
+    }
+  }
+
+  useEffect(() => {
+    fetchMusicians();
+  }, []);
+
+  const handleFilterChange = () => {
+    // const filtered = musician.filter(
+    //   (musician) =>
+    //     musician.name.toLowerCase().includes(filter.toLowerCase()) ||
+    //     musician.musicStyles.toLowerCase().includes(filter.toLowerCase())
+    // );
+    console.log(musician);
+    setFilteredCards(musician);
+  };
+
   return (
     <div className="containerD">
       <div className="contentD">
-      <div className="headerD">
-        <img
-          src="../Imagens/imageDashboard.svg"
-          alt="Imagem que representa músicos com seus inrtumentos na mão, com a frase: vamos achar um músico pra seu evento?"
-        />
-      </div>
-      <div className="sectionD">
-          <div className="search">
-          <input className="InputSearch" type="text" size="medium" placeholder="Buscando por..."/>
-          <div className="filtro">
-            <img src="../../icones/icon-filtro.svg" alt="" />
-          </div>
-          </div>
-
-          
+        <div className="headerD"></div>
+        <div className="sectionD">
+          <Search onFilterChange={handleFilterChange} />
 
           <div className="cardsD">
-            <Card name="Jose Roberto" estilo="pop e rock"/>
-            <Card name="Jose Roberto" estilo="pop e rock"/>
-            <Card name="Jose Roberto" estilo="pop e rock"/>
-            <Card name="Jose Roberto" estilo="pop e rock"/>
-            <Card name="Jose Roberto" estilo="pop e rock"/>
-            <Card name="Jose Roberto" estilo="pop e rock"/>
-            <Card name="Jose Roberto" estilo="pop e rock"/>
-            <Card name="Jose Roberto" estilo="pop e rock"/>
-            <Card name="Jose Roberto" estilo="pop e rock"/>
-            <Card name="Jose Roberto" estilo="pop e rock"/>
-            <Card name="Jose Roberto" estilo="pop e rock"/>
-            <Card name="Jose Roberto" estilo="pop e rock"/>
-
+            {filteredCards.length > 0 ? (
+              filteredCards.map((musician) => (
+                <Card
+                  key={musician.id}
+                  name={musician.name}
+                  //musicStyles={musician.musicStyles }
+                />
+              ))
+            ) : (
+              <div className="infoD">
+                <p>Artista ou Banda não encontrada!</p>
+              </div>
+            )}
           </div>
-      </div>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default dashboard
+export default Dashboard;
