@@ -1,14 +1,12 @@
 import "../styles/home.scss";
+
 export default function home() {
   return (
     <div className="containerH">
       <div className="contentH">
         <div className="headerH">
           <div className="logoH">
-            <img
-              src="..\Imagens\logo.svg"
-              alt="Logo/identidade visual do site procura Arte"
-            />
+            <h2 className="logoH">Procurarte</h2>
           </div>
           <div className="navBarH">
             <ul>
@@ -16,20 +14,35 @@ export default function home() {
                 <a href="#"></a>Quem somos
               </li>
               <li>
-                <a href="#"></a>Contato
+                <a href="#"></a>Login
               </li>
               <li>
-                <a href="#"></a>Login
+                <a href="#"></a>Contratar
               </li>
             </ul>
           </div>
         </div>
-        <div className="contextH">
-        <h1> Placeat nostrum! Nobis inventore asperiores dolorem! Sit magnam tenetur quaerat totam autem.</h1>
-        <div className="descriptionH">
-          Lorem ipsum dolor sit amet, elit. s asperirccusantium soluta aspernatur, ad excepturi consequuntur veritatis cumque, laudantium optio fuga.
-        </div>
-       <button className="btnEntrar">Contratar!</button>
+        <div className="HeroH">
+          <div className="col1">
+            <h1> Placeat nostrum! Nobis inventore asperiores ! </h1>
+            <div className="descriptionH">
+              Lorem ipsum dolor sit amet, elit. s asperirccusantium soluta
+              aspernatur, ad excepturi consequuntur veritatis cumque, laudantium
+              optio fuga.
+            </div>
+            <div className="btnH">
+              <button className="btnContratar">
+                {" "}
+                Contratar
+                <img
+                  className="iconSeta"
+                  src="../icones/icon-seta.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+          <div className="col2"></div>
         </div>
       </div>
     </div>

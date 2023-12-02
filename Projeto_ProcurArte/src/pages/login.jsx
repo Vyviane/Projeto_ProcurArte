@@ -1,6 +1,8 @@
 import "../styles/login.scss";
+import "../styles/globals.scss";
+
 import Input from "../components/Input";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function login() {
   return (
@@ -9,11 +11,11 @@ export default function login() {
         <div className="wrapL">
           <div className="col1L">
             <div className="logo">
-              <img src="../Imagens/logo.svg" alt="" />
+              <h2 className="logoL">ProcurArte</h2>
             </div>
             <div className="inputsL">
-              <Input text="Email" type="text" size="large" />
-              <Input text="Senha" type="password" size="large" />
+              <Input text="Email" type="text" size="medium" />
+              <Input text="Senha" type="password" size="medium" />
             </div>
             <div className="buttonsLR">
               <button className="entrar">Entrar</button>
@@ -21,14 +23,12 @@ export default function login() {
                 <img src="../Imagens/google.svg" alt="" className="googleSVG" />
               </button>
             </div>
-            <p>Não tem conta? Faça <Link to="/register">cadastro aqui</Link></p>
+            <p>
+              Não tem conta? Faça <Link to="/register">cadastro aqui</Link>
+            </p>
           </div>
+          <div className="col2">imagem muito bonita aqui</div>
         </div>
-        <img
-          className="image1L"
-          src="../Imagens/image1.svg"
-          alt="Imagens ilustrativa de musicos com seus respectivos instrumento,piano, bateria, cello, trompete e um vocalista"
-        />
       </div>
     </div>
   );

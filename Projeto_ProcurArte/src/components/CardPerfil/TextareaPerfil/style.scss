@@ -1,0 +1,23 @@
+.pText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 3vh;
+  text-align: start;
+  background-color: #fff;
+  min-width: 20vw;
+  max-width: 15vw;
+  padding: 12px;
+  border-radius: 4px;
+
+  label {
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 0.5vh;
+  }
+  p {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+  }
+}

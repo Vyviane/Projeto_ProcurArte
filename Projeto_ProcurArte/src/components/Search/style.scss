@@ -1,0 +1,21 @@
+.search {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 60px;
+}
+
+.InputSearch {
+  width: 90%;
+  height: 7vh;
+  padding: 20px;
+  background: #cfcece;
+}
+
+.filtro {
+  width: 5%;
+  cursor: pointer;
+  img {
+    width: 4vw;
+  }
+}

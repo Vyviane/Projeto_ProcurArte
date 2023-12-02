@@ -1,8 +1,7 @@
 .containerH {
   width: 100%;
   height: 100vh;
-  background: #000;
-  background-image: url();
+  background-image: url(../../Imagens/bgLogin.png);
   background-size: contain;
   display: flex;
   margin: 0 auto;
@@ -23,14 +22,24 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
+.logoH {
+  font-family: knewave,sans-serif !important;
+  font-size: 30px;
+  font-weight: 100;
+  color: #fff;
+}
 .headerH {
+  width: 79%;
+  height: 16%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  padding: 30px;
+  align-items: flex-start;
 }
 
 .navBarH {
@@ -39,6 +48,9 @@
   justify-content: center;
   align-items: center;
   gap: 100px;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 14px;
 
   ul {
     display: flex;
@@ -54,36 +66,66 @@
       transition: 0.5s;
 
       &:hover {
-        color: green;
+        color: #ff5151;
       }
     }
   }
 }
 
-.contextH {
+h1{
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+
+.HeroH {
   color: #fff;
-  width: 60%;
+  width: 80%;
+  height: 50%;
   display: flex;
-  padding: 60px;
-  flex-direction: column;
-  justify-content: start;
-  gap: 40px;
+  margin: 60px 0;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.col1{
+  width: 900%;
+}
+
+.col2{
+width: 10%;
 }
 
 .descriptionH {
   width: 80%;
 }
 
-.btnEntrar {
-  width: 30%;
-  color: #000;
-  border-radius: 26px;
-  font-weight: 700;
-  background: #fff;
-  cursor: pointer;
-  transition: 0.5s;
+.btnH {
+  margin-top: 60px;
 
-  &:hover {
-    background: #000;
+  .btnContratar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 20%;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+    background: transparent;
+    border-radius: 8px;
+    border: 0;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .iconSeta {
+    width: 24px;
+  }
+  :hover {
+    background: rgba(0, 0, 57, 0.614);
   }
 }
