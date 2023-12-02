@@ -1,10 +1,15 @@
+//import { useState } from "react";
+
 import "../styles/login.scss";
 import "../styles/globals.scss";
 
 import Input from "../components/Input";
 import { Link } from "react-router-dom";
 
-export default function login() {
+
+const Login = () =>{
+
+
   return (
     <div className="containerL">
       <div className="contentL">
@@ -14,8 +19,8 @@ export default function login() {
               <h2 className="logoL">ProcurArte</h2>
             </div>
             <div className="inputsL">
-              <Input text="Email" type="text" size="medium" />
-              <Input text="Senha" type="password" size="medium" />
+              <Input text="Email" type="text" size="medium" id="email"/>
+              <Input text="Senha" type="password" size="medium" id="senha"/>
             </div>
             <div className="buttonsLR">
               <button className="entrar">Entrar</button>
@@ -33,3 +38,4 @@ export default function login() {
     </div>
   );
 }
+export default Login;

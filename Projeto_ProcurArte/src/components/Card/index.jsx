@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import "./style.scss";
 // const Card = ({ name, estilo }) =>
-const Card = ({ name }) => {
+const Card = ({ name,urlFoto}) => {
   return (
     <div className="cardC">
       <div className="contentC">
         <div className="fotoUser">
           <img
-            src="https://i.pinimg.com/564x/62/a9/c2/62a9c22c499ee920b2868e4eb099c4be.jpg"
+            src={urlFoto}
             alt="Sua foto de usuario"
           />
         </div>
@@ -29,13 +29,9 @@ const Card = ({ name }) => {
 };
 
 Card.propTypes = {
-  //foto: PropTypes.string.isRequired,
+  urlFoto: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  estilo: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.any,
-    })
-  ),
+  //estilo: PropTypes.oneOf(musicStyle)
 };
 
 export default Card;

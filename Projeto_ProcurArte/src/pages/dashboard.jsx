@@ -44,6 +44,7 @@ const Dashboard = () => {
               filteredCards.map((musician) => (
                 <Card
                   key={musician.id}
+                  urlFoto={musician.portfolio.profilePhoto}
                   name={musician.name}
                   //musicStyles={musician.musicStyles }
                 />
