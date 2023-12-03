@@ -7,12 +7,13 @@ const api = new MusicianEndpoint();
 
 const Dashboard = () => {
   const [musician, setMusician] = useState([]);
-  const [filteredCards, setFilteredCards] = useState([]);
 
   async function fetchMusicians() {
     try {
       const musiciansData = await api.listMusician();
+    
       setMusician([...musiciansData.musicians]);
+    
     } catch (error) {
       console.error("Error fetching musicians:", error.message);
     }
@@ -22,36 +23,25 @@ const Dashboard = () => {
     fetchMusicians();
   }, []);
 
-  const handleFilterChange = () => {
-    // const filtered = musician.filter(
-    //   (musician) =>
-    //     musician.name.toLowerCase().includes(filter.toLowerCase()) ||
-    //     musician.musicStyles.toLowerCase().includes(filter.toLowerCase())
-    // );
-    console.log(musician);
-    setFilteredCards(musician);
-  };
-
+  console.log(musician.musicStyles, musician);
   return (
     <div className="containerD">
       <div className="contentD">
         <div className="headerD"></div>
         <div className="sectionD">
-          <Search onFilterChange={handleFilterChange} />
+          <Search />
 
           <div className="cardsD">
-            {filteredCards.length > 0 ? (
-              filteredCards.map((musician) => (
+
+            {
+              musician.map((musician) => (
                 <Card
                   key={musician.id}
                   name={musician.name}
-                  //musicStyles={musician.musicStyles }
+                  
+                  // musicStyles={musician.musicStyles}
                 />
-              ))
-            ) : (
-              <div className="infoD">
-                <p>Artista ou Banda não encontrada!</p>
-              </div>
+              )
             )}
           </div>
         </div>

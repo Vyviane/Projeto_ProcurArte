@@ -12,7 +12,6 @@ const Input = ({ type, text, size, placeholder }) => {
         className={inputClassName}
         type={type}
         name="Input"
-        id="input"
         placeholder={placeholder}
         required
       />
@@ -23,8 +22,8 @@ const Input = ({ type, text, size, placeholder }) => {
 Input.propTypes = {
   type: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(["medium", "large"]).isRequired,
-  placeholder: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(["medium", "large","small"]).isRequired,
+  placeholder: PropTypes.string,
 };
 
 export default Input;
