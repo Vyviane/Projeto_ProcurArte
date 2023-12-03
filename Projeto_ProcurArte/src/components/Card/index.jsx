@@ -1,7 +1,7 @@
 import "./style.scss";
 import PropTypes from "prop-types";
 
-const Card = (props) => {
+const Card = ({name, musicStyles}) => {
   return (
     <div className="cardC">
       <div className="contentC">
@@ -13,16 +13,18 @@ const Card = (props) => {
         </div>
         <div className="wrapC">
           <div className="descriptionC">
-            <p className="nameC">{props.name}</p>
+            <p className="nameC">{name}</p>
 
-            {musicStyles == null || musicStyles == undefined ? (
-              musicStyles.map((style) => {
-                <p key={style.id} className="estiloC"> {style.style} </p>
-                })
-            ) : (
-              <p>não possui estilo</p>
-            )}
-
+          {musicStyles == null || musicStyles == undefined || musicStyles.length == 0 ?  (
+            <p>não possui estilo</p>
+            )
+            : (
+             musicStyles.map((style) => (
+              <p key={style.id} className="estiloC">
+                {style.name}
+              </p>
+               ))
+          )}
           </div>
         </div>
       </div>
