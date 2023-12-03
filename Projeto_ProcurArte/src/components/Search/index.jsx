@@ -1,11 +1,8 @@
 import PropTypes from "prop-types";
 import "./style.scss";
 
-const Search = ({ onFilterChange }) => {
-  const handleInputChange = (event) => {
-    const filterValue = event.target.value;
-    onFilterChange(filterValue);
-  };
+const Search = () => {
+  
 
   return (
     <div>
@@ -15,7 +12,7 @@ const Search = ({ onFilterChange }) => {
           type="text"
           size="medium"
           placeholder="Buscando por..."
-          onChange={handleInputChange}
+          // onChange={handleInputChange}
         />
         <div className="filtro">
           <img src="../../icones/icon-filtro.svg" alt="" />
