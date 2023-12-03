@@ -15,16 +15,14 @@ const Card = (props) => {
           <div className="descriptionC">
             <p className="nameC">{props.name}</p>
 
-          {musicStyles == null || undefined ? (
-            <p>não possui estilo</p>
-            )
-            : (
-             {props.musicStyles.map((styles) => (
-              <p key={styles.id} className="estiloC">
-                {styles.style}
-              </p>
-               ))
-          })}
+            {musicStyles == null || musicStyles == undefined ? (
+              musicStyles.map((style) => {
+                <p key={style.id} className="estiloC"> {style.style} </p>
+                })
+            ) : (
+              <p>não possui estilo</p>
+            )}
+
           </div>
         </div>
       </div>
