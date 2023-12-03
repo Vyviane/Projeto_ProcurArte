@@ -39,7 +39,7 @@ const Dashboard = () => {
                   key={musician.id}
                   name={musician.name}
                   
-                  // musicStyles={musician.musicStyles}
+                  musicStyles={musician.musicStyles}
                 />
               )
             )}
