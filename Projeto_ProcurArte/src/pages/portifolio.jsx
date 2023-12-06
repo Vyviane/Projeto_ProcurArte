@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "../styles/portifolio.scss";
 import Textarea from "../components/Textarea/Textarea";
-import Perfil from "../components/Perfil";
+
+import TextareaPerfil from "../components/CardPerfil/TextareaPerfil";
+import CardPerfil from "../components/CardPerfil";
 import Navbar from "../components/Navbar";
 import { MusicianEndpoint } from "../services/musicianService";
 import { toast } from "react-toastify";
@@ -224,7 +226,25 @@ const Portifolio = () => {
             </button>
           </div>
         </div>
-        <Perfil />
+        <div className="exibir-portifolio">
+      <div className="first-s">
+        <img src="../../Imagens/imageSergio.svg" className="img-perfil" />
+        <h2>Seu nome</h2>
+        <h5>Seu  @ do instagram</h5>
+      </div>
+      <div className="row1">
+        <CardPerfil name="estilo" text="Seu estilo musicial" label="Estilo: " />
+        <CardPerfil name="instrumento" text="Seu instrumento" label="Instrumento: "/>
+      </div>
+      <div className="row2">
+        <TextareaPerfil
+          name="resumo"
+          text="Aqui é onde ficará todo seu resumo profissional, por tanto escreva suas experiências em eventos, lugares em que ja tocou, pode comentar também um pouco da sua história. Não economize em detalhes, pois isso aumentará suas chances de ser contratado mais rapido"
+          label="Resumo profissional: "
+        />
+      </div>
+      <button className="btn-contato">Entrar em contato</button>
+    </div>
       </div>
     </div>
   );
