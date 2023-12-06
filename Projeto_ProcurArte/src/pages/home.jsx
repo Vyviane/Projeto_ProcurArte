@@ -1,13 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import "../styles/home.scss";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-export default function home() {
 
-  const nav = useNavigate()
 
-  const handleLogin = () => {
-    nav('/login')
-  }
+const Home = () =>  {
+  
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
 
   return (
     <div className="containerH">
@@ -30,7 +33,7 @@ export default function home() {
             </ul>
           </div>
         </div>
-        <div className="HeroH">
+        <div className="HeroH" data-aos="fade-up" data-aos-once="true">
           <div className="col1">
             <h1> Placeat nostrum! Nobis inventore asperiores ! </h1>
             <div className="descriptionH">
@@ -56,3 +59,6 @@ export default function home() {
     </div>
   );
 }
+
+
+export default Home;
