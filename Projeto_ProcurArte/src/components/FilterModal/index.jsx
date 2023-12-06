@@ -16,6 +16,7 @@ const FilterModal = () =>{
 
   function Handlefiltrar() {
     toast.success("muito bom tudo filtrado")
+    localStorage.clear()
   }
 
   return (

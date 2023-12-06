@@ -6,9 +6,11 @@ const api = axios.create({
 
 export class AddressEndpoint {
     async getAddress(cep) {
-        const response = (await api.get(`${cep}`)).headers({
-          "Authorization": `Bearer ${localStorage.getItem(user).token}`
-        })
+        const response = (await api.get(`${cep}`, {
+          headers: {
+            Authorization: `Bearer ${JSON.parse(localStorage.getItem('user')).token}`
+          }
+        }))
         return response.data; 
     }
 }
