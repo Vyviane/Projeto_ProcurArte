@@ -1,16 +1,32 @@
 .containerN {
-  background: linear-gradient(
-    140deg,
-    rgba(255, 255, 255, 0.788),
-    rgba(255, 252, 252, 0.1)
-  );
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  background-image: url(../../Imagens/bgTest10.jpg);
+  width: 80px;
+}
+
+.contentN{
   display: flex;
+  color:#fff;
+  font-weight: 900;
+  font-family: Knewave;
+  font-size: 26px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  background: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
   width: 80px;
+  height: 100%;
   padding: 24px 14px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.btn-sair{
+  cursor: pointer;
 }

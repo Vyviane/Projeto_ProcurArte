@@ -6,14 +6,13 @@
 .portifolio {
   width: 100%;
   height: 100vh;
-  background-image: url(../../Imagens/bg.png);
-  background-size: contain;
+  background-image: url(../../Imagens/bgTest10.jpg);
+  background-size: cover;
   display: flex;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
   gap: 2vw;
-
   .inputs-portifolio {
     background: linear-gradient(
       140deg,
@@ -73,9 +72,15 @@
             color: black;
             margin-top: 1rem;
           }
+          
         }
       }
     }
+    
+    .labelP{
+      color: #fff;
+    }
+
     .buttonSalvar {
       display: flex;
       flex-direction: row;
@@ -95,4 +100,27 @@
       }
     }
   }
+
+}
+.uploadPhotos{
+  margin-top: 20px;
+}
+
+.buttonUploado{
+  width: 10vw;
+  margin-left: 10px;
+  background-color: rgb(229, 0, 0);
+  backdrop-filter: blur(5px);
+  border: none;
+  height: 5vh;
+  width: 10vw;
+  cursor: pointer;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.Instagram{
+  width: 100%;
 }

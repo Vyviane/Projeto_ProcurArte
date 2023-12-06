@@ -3,11 +3,12 @@ import "./style.scss";
 export default function index() {
   return (
     <div className="containerN">
-      <div className="logoN">logo</div>
+     <div className="contentN">
+     <div className="logoN">P</div>
       <div className="btn-sair">
-        <img src="" alt="" />
-        <p>Sair</p>
+        <p><img src="../icones/icon-exit.svg" alt="icone que indica saída" /></p>
       </div>
+     </div>
     </div>
   );
 }
