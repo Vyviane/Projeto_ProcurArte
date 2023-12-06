@@ -11,12 +11,9 @@ const api = new MusicianEndpoint();
 const Portifolio = () => {
   const [musicianDescription, setMusicianDescription] = useState("");
   const [instagramProfile, setInstagramProfile] = useState("");
-  //const [profilePhoto, setprofilePhoto] = useState("");
-  //const [thumbnail, setThumbnail] = useState("");
+  const [profilePhoto, setprofilePhoto] = useState("");
   const [instrument, setInstrument] = useState("");
-  //const [media, setmedia] = useState("");
   const [musicStyle, setMusicStyle] = useState("");
-  //const [mensagem, setMensagem] = useState("");
   const [selectedFile, setSelectedFile] = useState();
 
   const handleFileChange = (event) => {
@@ -29,7 +26,8 @@ const Portifolio = () => {
       formData.append("image", selectedFile);
 
       const responseData = await api.updateImages();
-
+      //chamada para buscar nova url da imagem  
+      //passar setprofilePhoto
       toast.success(" Foto selecionada com sucesso!" + responseData);
     } catch (error) {
       toast.error("Erro ao fazer o upload:", error.message);
@@ -41,9 +39,7 @@ const Portifolio = () => {
       const portfolioData = await api.updatePortfolio("", {
         musicianDescription,
         instagramProfile,
-        // profilePhoto,
-        // thumbnail,
-        // media,
+        profilePhoto,  
       });
 
       if (portfolioData.status === 200) {
@@ -73,12 +69,12 @@ const Portifolio = () => {
         musicStyle,
       });
     } catch (error) {
-      return;
+      return; 
     }
   };
 
   function handleSalvarPortfolio() {
-    handlePortfolio, handleInstrument, handleMusicStyle;
+    handlePortfolio(), handleInstrument(), handleMusicStyle();
   }
 
   return (
@@ -88,7 +84,7 @@ const Portifolio = () => {
         <div className="inputs-portifolio">
           <div className="inputs-2">
             <div className="select">
-              <label htmlFor="select">Estilo</label>
+              <label className="labelP" htmlFor="select">Estilo</label>
               <select
                 name="select"
                 id=""
@@ -141,7 +137,7 @@ const Portifolio = () => {
               </select>
             </div>
             <div className="select">
-              <label htmlFor="select">Instrumento</label>
+              <label className="labelP" htmlFor="select">Instrumento</label>
               <select
                 name="select"
                 id=""

@@ -13,7 +13,6 @@
   justify-content: center;
   align-items: center;
   gap: 2vw;
-
   .inputs-portifolio {
     background: linear-gradient(
       140deg,
@@ -73,9 +72,15 @@
             color: black;
             margin-top: 1rem;
           }
+          
         }
       }
     }
+    
+    .labelP{
+      color: #fff;
+    }
+
     .buttonSalvar {
       display: flex;
       flex-direction: row;

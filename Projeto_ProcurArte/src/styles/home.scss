@@ -58,11 +58,12 @@
     justify-content: center;
     gap: 40px;
     list-style: none;
-    text-decoration: none;
 
-    li {
+
+    li .linkH{
       color: #fff;
       cursor: pointer;
+      text-decoration: none;
       transition: 0.5s;
 
       &:hover {

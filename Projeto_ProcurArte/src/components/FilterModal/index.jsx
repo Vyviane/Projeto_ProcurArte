@@ -4,19 +4,20 @@ import Modal from 'react-modal';
 import { toast } from "react-toastify";
 
 const FilterModal = () =>{
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
 
   function openModal() {
-    setIsOpen(modalIsOpen);
+    setModalIsOpen(true);
   }
 
   function closeModal() {
-    setIsOpen(false);
+    setModalIsOpen(false);
   }
 
   function Handlefiltrar() {
     toast.success("muito bom tudo filtrado")
-    localStorage.clear()
+    localStorage.clear();
+    closeModal();
   }
 
   return (
@@ -24,7 +25,7 @@ const FilterModal = () =>{
       <button onClick={openModal}>Open Modal</button>
       
       <Modal
-        isOpen={openModal}
+        isOpen={modalIsOpen}
         onRequestClose={closeModal}
         shouldCloseOnOverlayClick
         className="modal"

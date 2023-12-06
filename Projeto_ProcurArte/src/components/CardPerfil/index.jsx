@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export default function CardPerfil({ name, text, label }) {
   return (
     <div className="p">
-      <label htmlFor={name}>{label}</label>
+      <label className="labelC" htmlFor={name}>{label}</label>
       <p name={name}>{text}</p>
     </div>
   );

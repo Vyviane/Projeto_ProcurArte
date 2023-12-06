@@ -20,12 +20,7 @@ export default function Register() {
   const handleRegister = async () => {
     try {
       const responseData = await api.RegisterEndpoint(
-        email,
-        fullName,
-        password,
-        repeatPassword,
-        phone,
-        cpf
+ 
       );
       toast.success("Conta criada com sucesso!");
 
