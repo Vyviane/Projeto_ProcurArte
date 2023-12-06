@@ -1,10 +1,8 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/home.scss";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-
-
 
 const Home = () =>  {
   
@@ -22,13 +20,10 @@ const Home = () =>  {
           <div className="navBarH">
             <ul>
               <li>
-                <a href="#" ></a>Quem somos
+                <Link className="linkH" to="/login">Login</Link>
               </li>
               <li>
-                <a href="#" onClick={() => handleLogin }></a>Login
-              </li>
-              <li>
-                <a href="#" ></a>Contratar
+              <Link  className="linkH" to="/dashboard">Contratar</Link>
               </li>
             </ul>
           </div>
@@ -42,7 +37,7 @@ const Home = () =>  {
               optio fuga.
             </div>
             <div className="btnH">
-              <button className="btnContratar">
+            <Link to="/dashboard"><button className="btnContratar">
                 {" "}
                 Contratar
                 <img
@@ -51,6 +46,7 @@ const Home = () =>  {
                   alt=""
                 />
               </button>
+              </Link>
             </div>
           </div>
           <div className="col2"></div>

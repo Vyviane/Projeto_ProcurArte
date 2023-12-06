@@ -49,6 +49,7 @@ const Dashboard = () => {
         </div>
         <FilterModal/>
       </div>
+                
     </div>
   );
 };
