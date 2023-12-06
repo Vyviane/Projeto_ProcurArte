@@ -20,8 +20,15 @@ export default function Register() {
   const handleRegister = async () => {
     try {
       const responseData = await api.RegisterEndpoint(
+        email,
+        fullName,
+        password,
+        repeatPassword,
+        phone,
+        cpf
       );
       toast.success("Conta criada com sucesso!");
+
       console.log(responseData);
     } catch (error) {
       toast.error("Erro ao criar conta. Por favor, tente novamente.", error);
