@@ -1,6 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import "../styles/home.scss";
 
 export default function home() {
+
+  const nav = useNavigate()
+
+  const handleLogin = () => {
+    nav('/login')
+  }
+
   return (
     <div className="containerH">
       <div className="contentH">
@@ -11,13 +19,13 @@ export default function home() {
           <div className="navBarH">
             <ul>
               <li>
-                <a href="#"></a>Quem somos
+                <a href="#" ></a>Quem somos
               </li>
               <li>
-                <a href="#"></a>Login
+                <a href="#" onClick={() => handleLogin }></a>Login
               </li>
               <li>
-                <a href="#"></a>Contratar
+                <a href="#" ></a>Contratar
               </li>
             </ul>
           </div>

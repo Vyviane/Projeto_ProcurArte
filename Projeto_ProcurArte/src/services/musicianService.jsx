@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:8081/musician/",
+  baseURL: "http://localhost:8081/musician",
 });
 
 export class MusicianEndpoint {

@@ -22,7 +22,7 @@ const Card = ({name, musicStyles}) => {
              musicStyles.map((style) => (
               console.log(style + "teste"),
               <p key={style.id} className="estiloC">
-                {style.style}
+                {style.name}
               </p>
                ))
           )}
