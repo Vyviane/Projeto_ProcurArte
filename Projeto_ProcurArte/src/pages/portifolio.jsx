@@ -36,10 +36,12 @@ const Portifolio = () => {
 
   const handlePortfolio = async () => {
     try {
-      const portfolioData = await api.updatePortfolio("", {
+      const portfolioData = await api.updatePortfolio("656540b12fd8a57dc1b96fcc", {
         musicianDescription,
         instagramProfile,
-        profilePhoto,  
+        profilePhoto,
+        thumbnail: "",
+        media: [],
       });
 
       if (portfolioData.status === 200) {
@@ -53,28 +55,28 @@ const Portifolio = () => {
     }
   };
 
-  const handleInstrument = async () => {
-    try {
-      const instrument = await api.updateInstruments("", {
-        instrument,
-      });
-    } catch (error) {
-      return;
-    }
-  };
+  // const handleInstrument = async () => {
+  //   try {
+  //     const instrument = await api.updateInstruments("", {
+  //       instrument,
+  //     });
+  //   } catch (error) {
+  //     return;
+  //   }
+  // };
 
-  const handleMusicStyle = async () => {
-    try {
-      const musicStyle = await api.updateMusicStyles("", {
-        musicStyle,
-      });
-    } catch (error) {
-      return; 
-    }
-  };
+  // const handleMusicStyle = async () => {
+  //   try {
+  //     const musicStyle = await api.updateMusicStyles("", {
+  //       musicStyle,
+  //     });
+  //   } catch (error) {
+  //     return; 
+  //   }
+  // };
 
   function handleSalvarPortfolio() {
-    handlePortfolio(), handleInstrument(), handleMusicStyle();
+    handlePortfolio();
   }
 
   return (
@@ -119,14 +121,12 @@ const Portifolio = () => {
                 <option value="Bachata">Bachata</option>
                 <option value="Trap">Trap</option>
                 <option value="Grime">Grime</option>
-
                 <option value="HeavyMetal">Heavy Metal</option>
                 <option value="ThrashMetal">Thrash Metal</option>
                 <option value="DeathMetal">Death Metal</option>
                 <option value="BlackMetal">Black Metal</option>
                 <option value="PunkRock">Punk Rock</option>
                 <option value="IndieRock">Indie Rock</option>
-
                 <option value="Gospel">Gospel</option>
                 <option value="Blues2">Blues</option>
                 <option value="NewAge">New Age</option>
