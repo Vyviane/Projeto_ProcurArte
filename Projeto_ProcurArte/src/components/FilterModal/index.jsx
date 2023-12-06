@@ -1,99 +1,50 @@
-import { useState } from "react";
-import "../styles/portifolio.scss";
-import Textarea from "../components/Textarea/Textarea";
-import Perfil from "../components/Perfil";
-import Navbar from "../components/Navbar";
-import { MusicianEndpoint } from "../services/musicianService";
+import "./style.scss";
+import React from 'react';
+import Modal from 'react-modal';
 import { toast } from "react-toastify";
 
-const api = new MusicianEndpoint();
+const FilterModal = () =>{
+  const [modalIsOpen, setIsOpen] = React.useState(false);
 
-const Portifolio = () => {
-  const [musicianDescription, setMusicianDescription] = useState("");
-  const [instagramProfile, setInstagramProfile] = useState("");
-  //const [profilePhoto, setprofilePhoto] = useState("");
-  //const [thumbnail, setThumbnail] = useState("");
-  const [instrument, setInstrument] = useState("");
-  //const [media, setmedia] = useState("");
-  const [musicStyle, setMusicStyle] = useState("");
-  //const [mensagem, setMensagem] = useState("");
-  const [selectedFile, setSelectedFile] = useState();
+  function openModal() {
+    setIsOpen(modalIsOpen);
+  }
 
-  const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
-  };
+  function closeModal() {
+    setIsOpen(false);
+  }
 
-  const handleUpload = async () => {
-    try {
-      const formData = new FormData();
-      formData.append("image", selectedFile);
-
-      const responseData = await api.updateImages();
-
-      toast.success(" Foto selecionada com sucesso!" + responseData);
-    } catch (error) {
-      toast.error("Erro ao fazer o upload:", error.message);
-    }
-  };
-
-  const handlePortfolio = async () => {
-    try {
-      const portfolioData = await api.updatePortfolio("", {
-        musicianDescription,
-        instagramProfile,
-        // profilePhoto,
-        // thumbnail,
-        // media,
-      });
-
-      if (portfolioData.status === 200) {
-        toast.success("Perfil salvo com sucesso!");
-      } else {
-        toast.success("Erro ao salvar perfil. Por favor, tente novamente.");
-      }
-    } catch (error) {
-      toast.error("Erro ao salvar perfil:", error);
-      toast.error("Erro ao salvar perfil. Por favor, tente novamente.");
-    }
-  };
-
-  const handleInstrument = async () => {
-    try {
-      const instrument = await api.updateInstruments("", {
-        instrument,
-      });
-    } catch (error) {
-      return;
-    }
-  };
-
-  const handleMusicStyle = async () => {
-    try {
-      const musicStyle = await api.updateMusicStyles("", {
-        musicStyle,
-      });
-    } catch (error) {
-      return;
-    }
-  };
-
-  function handleSalvarPortfolio() {
-    handlePortfolio, handleInstrument, handleMusicStyle;
+  function Handlefiltrar() {
+    toast.success("muito bom tudo filtrado")
   }
 
   return (
-    <div className="containerP">
-      <Navbar />
-      <div className="portifolio">
-        <div className="inputs-portifolio">
-          <div className="inputs-2">
+    <div>
+      <button onClick={openModal}>Open Modal</button>
+      
+      <Modal
+        isOpen={openModal}
+        onRequestClose={closeModal}
+        shouldCloseOnOverlayClick
+        className="modal"
+        style={{
+          overlay: {
+            backgroundColor: "rgb(0 0 0 / 75%)",
+          },
+        }}
+      >
+          <div className="headerModal">
+            <h1 className="titleFilter">Adicionar filtros:</h1>
+            
+          </div>
             <div className="select">
-              <label htmlFor="select">Estilo</label>
+
+            <input type="text" />
+            <label htmlFor="select">Estilo</label>
               <select
+              className="options"
                 name="select"
                 id=""
-                value={musicStyle}
-                onChange={(e) => setMusicStyle(e.target.value)}
               >
                 <option value="Ocidental">Clássica Ocidental</option>
                 <option value="Orquestral">Música Orquestral</option>
@@ -139,14 +90,13 @@ const Portifolio = () => {
                 <option value="JPop">J-Pop (Pop Japonês)</option>
                 <option value="KPop">K-Pop (Pop Coreano)</option>
               </select>
-            </div>
-            <div className="select">
+
+              
               <label htmlFor="select">Instrumento</label>
               <select
+              className="options"
                 name="select"
                 id=""
-                value={instrument}
-                onChange={(e) => setInstrument(e.target.value)}
               >
                 <option value="Violao">Violão</option>
                 <option value="Guitarra">Guitarra</option>
@@ -198,40 +148,22 @@ const Portifolio = () => {
                 <option value="Guzheng">Guzheng</option>
                 <option value="Zither">Zither</option>
               </select>
-            </div>
-          </div>
-          <div className="inputs-1">
-            <label htmlFor="select">Instagram</label>
-            <input
-              className="Instagram"
-              name="instagram"
-              value={instagramProfile}
-              onChange={(e) => setInstagramProfile(e.target.value)}
-            />
-            <Textarea
-              name="resumo"
-              text="Resumo profissional"
-              value={musicianDescription}
-              onChange={(e) => setMusicianDescription(e.target.value)}
-            />
-          </div>
-          <div className="uploadPhotos">
-            <input type="file" onChange={handleFileChange} />
-            <button className="buttonUploado" onClick={handleUpload}>
-              Upload
-            </button>
-          </div>
 
-          <div className="buttonSalvar">
-            <button className="salvar" onClick={handleSalvarPortfolio}>
-              Salvar
+              
+            </div>
+            <div className="btn">
+            <button
+              className="filtarButton"
+              onClick={() => Handlefiltrar()}
+            >
+             Filtrar
             </button>
-          </div>
-        </div>
-        <Perfil />
-      </div>
+            </div>
+      </Modal>
     </div>
   );
-};
+}
 
-export default Portifolio;
+
+
+export default FilterModal;

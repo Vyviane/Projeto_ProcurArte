@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import "./style.scss";
 
 const Search = () => {
@@ -22,8 +22,8 @@ const Search = () => {
   );
 };
 
-Search.propTypes = {
-  onFilterChange: PropTypes.func.isRequired,
-};
+// Search.propTypes = {
+//   onFilterChange: PropTypes.func.isRequired,
+// };
 
 export default Search;

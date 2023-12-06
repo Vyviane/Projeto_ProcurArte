@@ -3,6 +3,9 @@ import "../styles/dashboard.scss";
 import Card from "../components/Card";
 import Search from "../components/Search";
 import { MusicianEndpoint } from "../services/musicianService";
+import { toast } from "react-toastify";
+import FilterModal from "../components/FilterModal";
+
 const api = new MusicianEndpoint();
 
 const Dashboard = () => {
@@ -11,11 +14,11 @@ const Dashboard = () => {
   async function fetchMusicians() {
     try {
       const musiciansData = await api.listMusician();
-    
+    console.log(musiciansData)
       setMusician([...musiciansData.musicians]);
     
     } catch (error) {
-      console.error("Error fetching musicians:", error.message);
+      toast.error(error.message);
     }
   }
 
@@ -38,13 +41,13 @@ const Dashboard = () => {
                 <Card
                   key={musician.id}
                   name={musician.name}
-                  
                   musicStyles={musician.musicStyles}
                 />
               )
             )}
           </div>
         </div>
+        <FilterModal/>
       </div>
     </div>
   );
